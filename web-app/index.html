@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <title>URBANOVA | HOME</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="/CSS/style1.css"> <!-- Hoja de estilos principal -->
+    
+    <!-- Inclusión de librería de iconos Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Configuración para diseño responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+<body>
+  <!-- Barra lateral de navegación -->
+  <div class="sidebar">
+    <div class="logo-details">
+      <!-- Logotipo de la empresa -->
+      <div class="logito"><img height="65px" width="auto" src="/img/logo_urbanova.png" alt="Logo Urbanova"></div>
+      <!-- Texto del logo -->
+      <div class="logo_name"><img height="27px" width="auto" src="/img/URBANOVA_text.png" alt="Urbanova"></div>
+      <!-- Botón para expandir/contraer menú -->
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+    
+    <!-- Lista de opciones del menú -->
+    <ul class="nav-list">
+      <!-- Barra de búsqueda -->
+      <li>
+        <form id="busc">
+          <input type="text" name="buscar" placeholder="Search..." required>
+          <button type="submit" style="background: none; border: none;">
+              <i class='bx bx-search'></i>
+          </button>
+          <span class="tooltip">Buscar</span>
+        </form>
+      </li>
+      
+      <!-- Script para manejar búsquedas -->
+      <script>
+        document.getElementById('busc').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previene envío tradicional del formulario
+
+            const formData = new FormData(this); // Crea objeto FormData
+            
+            // Limpia el iframe antes de nueva búsqueda
+            document.getElementById('ventana').src = 'about:blank';  
+
+            // Realiza petición fetch al servidor
+            fetch('busc.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Muestra resultados en el iframe
+                const iframe = document.getElementById('ventana'); 
+                const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                iframeDocument.body.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                const iframe = document.getElementById('ventana');
+                const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+                iframeDocument.body.innerHTML = 'Error en la búsqueda.'; //mostrar el error en el iframe
+            });
+        });
+      </script>
+      
+      <!-- Opción Home -->
+      <li>
+        <a href="#" onclick="document.getElementById('ventana').src='home.php';">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      
+      <!-- Opción Registrarse -->
+      <li>
+        <a href="#" onclick="document.getElementById('ventana').src='opcion.html';">            
+          <i class='bx bx-lock-open'></i>
+          <span class="links_name">Registrarse</span>
+        </a>
+        <span class="tooltip">Registrarse</span>
+      </li>
+       
+      <!-- Opción Acceder a Cuenta -->
+      <li>
+        <a href="#" onclick="document.getElementById('ventana').src='clave1.html';">        
+          <i class='bx bx-log-in'></i>
+          <span class="links_name">Acceder a Cuenta</span>
+        </a>
+        <span class="tooltip">Acceder</span>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- Sección principal de contenido -->
+  <section class="home-section">
+    <div id="responseMessage" class="contenedor-responsivo"> 
+      <!-- Iframe para cargar contenido dinámico -->
+      <iframe id="ventana" src="home.html" width="100%" height="100%" frameBorder="0" class="iframe-responsivo"></iframe> 
+    </div>
+  </section>
+  
+  <!-- Script para manejar la barra lateral -->
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    
+    // Evento para expandir/contraer menú
+    closeBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("open");
+      menuBtnChange();
+    });
+    
+    // Función para cambiar icono del botón
+    function menuBtnChange() {
+      if(sidebar.classList.contains("open")){
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else {
+        closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+      }
+    }
+  </script>
+</body>
+</html>

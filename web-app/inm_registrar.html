@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuración básica del documento HTML -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <link rel="stylesheet" href="/CSS/formulario1.css"> <!-- Enlace a la hoja de estilos CSS -->
+    <title>Document</title> <!-- Título del documento (puede ser modificado) -->
+</head>
+<body>
+    <!-- Encabezado de la página con el logo -->
+    <div class="header">
+        <img height="60px" width="auto" src="/img/URBANOVA_text.png" alt=""> <!-- Logo de la empresa -->
+    </div><br><br> <!-- Espacios adicionales -->
+
+    <!-- Contenedor principal del formulario -->
+    <div class="container">
+        <div class="wrapper">
+          <div class="title"><span>Registro de un Inmueble</span></div> <!-- Título del formulario -->
+    
+    <!-- Formulario para registrar un inmueble (envía datos a "inm_registrar.php") -->
+    <form action="inm_registrar.php" method="post">
+        <!-- Campo para la dirección del inmueble -->
+        <div class="row">
+            <i class="fas fa-user"></i> 
+            <input type="text" id="direccion" name="direccion" required size="50" placeholder="Direccion" required>
+          </div>
+          
+          <!-- Campo para el número de habitaciones -->
+          <div class="row">
+            <i class="fas fa-lock"></i> 
+            <input type="text" id="habitacion" name="habitacion" required size="5"placeholder="Habitaciones" required>
+          </div>
+          
+          <!-- Campo para el número de baños -->
+          <div class="row">
+            <i class="fas fa-user"></i> 
+            <input type="text" id="banos" name="banos" required size="5" placeholder="Baños" required>
+          </div>
+          
+          <!-- Campo para los metros cuadrados del terreno -->
+          <div class="row">
+            <i class="fas fa-user"></i> 
+            <input type="text" id="mts2" name="mts2" required size="7" placeholder="Metros Cuadrados Terreno" required>
+          </div>
+          
+          <!-- Campo para los metros construidos -->
+          <div class="row">
+            <i class="fas fa-user"></i> 
+            <input type="text" id="mtsc" name="mtsc" required size="7" placeholder="Metros Construidos" required>
+          </div>
+          
+          <!-- Campo para el precio del inmueble -->
+          <div class="row">
+            <i class="fas fa-user"></i> 
+            <input type="text" id="precio" name="precio" required size="10" placeholder="Precio" required>
+          </div>
+          <br>
+          
+          <!-- Selección del tipo de inmueble (radio buttons) -->
+          <div class="big"><label for="">Tipo de Inmueble</label></div>
+          <div class="option">
+            <i class="fas fa-user"></i> 
+            <input type="radio" id="contactChoice1" name="tipo" value="D" />
+      <label for="contactChoice1">Departamento</label>
+
+      <input type="radio" id="contactChoice2" name="tipo" value="C" />
+      <label for="contactChoice2">Casa</label>
+
+      <input type="radio" id="contactChoice2" name="tipo" value="T" />
+      <label for="contactChoice2">Terreno</label> 
+    </div>
+    <br>
+    
+    <!-- Campo de texto para la descripción del inmueble -->
+    <div class="big"><label for="">Descripción del Inmueble</label></div>
+    <textarea id="descrip" name="descrip" minlength="10" maxlength="600" required cols="80" rows="10"></textarea>
+          <br><br>
+          
+          <!-- Botón para enviar el formulario -->
+          <div class="row button">
+            <input type="submit" value="Crear">
+          </div>
+          
+          <!-- Botón para resetear el formulario -->
+          <div class="row button">
+            <input type="reset" value="Cancelar">
+          </div>
+    </form>
+    
+</body>
+</html>

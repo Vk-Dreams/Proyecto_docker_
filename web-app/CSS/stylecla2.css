@@ -1,0 +1,143 @@
+/* Importa la fuente Poppins de Google Fonts con diferentes pesos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Reset básico para todos los elementos */
+* {
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina rellenos por defecto */
+    box-sizing: border-box; /* Modelo de caja más intuitivo */
+    font-family: "Poppins", sans-serif; /* Establece Poppins como fuente principal */
+}
+
+/* Estilo para texto seleccionado */
+::selection {
+    background: rgba(82, 161, 62, 0.3); /* Fondo verde semitransparente al seleccionar */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 440px; /* Ancho máximo del contenedor */
+    padding: 0 20px; /* Relleno horizontal */
+    margin: 130px auto; /* Centrado vertical y horizontal */
+}
+
+/* Wrapper del formulario */
+.wrapper {
+    width: 100%; /* Ancho completo */
+    background: #fff; /* Fondo blanco */
+    border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Encabezado */
+.header {
+    width: 100%; /* Ancho completo */
+    height: 70px; /* Altura fija */
+    margin-top: 0px; /* Sin margen superior */
+    border-left: 10px; /* Borde izquierdo (sin especificar estilo) */
+    background: #00000093; /* Fondo negro semitransparente */
+}
+
+/* Título del formulario */
+.wrapper .title {
+    height: 90px; /* Altura fija */
+    background: #2b1249; /* Fondo morado oscuro */
+    border-radius: 5px 5px 0 0; /* Esquinas redondeadas solo arriba */
+    color: #fff; /* Texto blanco */
+    font-size: 30px; /* Tamaño de fuente grande */
+    font-weight: 600; /* Peso de fuente seminegrita */
+    display: flex; /* Flexbox para centrado */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+}
+
+/* Estilos del formulario */
+.wrapper form {
+    padding: 30px 25px 25px 25px; /* Relleno interno */
+}
+
+/* Filas del formulario */
+.wrapper form .row {
+    height: 45px; /* Altura fija */
+    margin-bottom: 15px; /* Margen inferior */
+    position: relative; /* Posición relativa para elementos hijos */
+}
+
+/* Campos de entrada */
+.wrapper form .row input {
+    height: 100%; /* Altura completa */
+    width: 100%; /* Ancho completo */
+    outline: none; /* Elimina contorno al enfocar */
+    padding-left: 60px; /* Relleno izquierdo para icono */
+    border-radius: 5px; /* Esquinas redondeadas */
+    border: 1px solid lightgrey; /* Borde gris claro */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Estilo al enfocar campos */
+form .row input:focus {
+    border-color: #D99842; /* Borde naranja al enfocar */
+    box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25); /* Sombra interna */
+}
+
+/* Placeholder de los inputs */
+form .row input::placeholder {
+    color: #999; /* Color gris para placeholder */
+}
+
+/* Iconos de los campos */
+.wrapper form .row i {
+    position: absolute; /* Posición absoluta dentro del campo */
+    width: 47px; /* Ancho fijo */
+    height: 100%; /* Altura completa */
+    color: #fff; /* Color blanco */
+    font-size: 18px; /* Tamaño de icono */
+    background: #D99842; /* Fondo naranja */
+    border: 1px solid ; /* Borde (sin especificar color) */
+    border-radius: 5px 0 0 5px; /* Esquinas redondeadas izquierda */
+    display: flex; /* Flexbox para centrado */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+}
+
+/* Enlace de contraseña */
+.wrapper form .pass {
+    margin: -8px 0 20px 0; /* Margen negativo superior */
+}
+.wrapper form .pass a {
+    color: #c48432; /* Color naranja oscuro */
+    font-size: 17px; /* Tamaño de fuente */
+    text-decoration: none; /* Sin subrayado */
+}
+.wrapper form .pass a:hover {
+    text-decoration: underline; /* Subrayado al pasar mouse */
+}
+
+/* Botón de envío */
+.wrapper form .button input {
+    color: #fff; /* Texto blanco */
+    font-size: 20px; /* Tamaño de fuente grande */
+    font-weight: 500; /* Peso de fuente medio */
+    padding-left: 0px; /* Sin relleno izquierdo */
+    background: #2b1249; /* Fondo morado oscuro */
+    border: 1px solid #2b1249; /* Borde del mismo color */
+    cursor: pointer; /* Cursor de puntero */
+}
+form .button input:hover {
+    background: #49217a; /* Fondo morado más claro al pasar mouse */
+}
+
+/* Enlace de registro */
+.wrapper form .signup-link {
+    text-align: center; /* Texto centrado */
+    margin-top: 20px; /* Margen superior */
+    font-size: 17px; /* Tamaño de fuente */
+}
+.wrapper form .signup-link a {
+    color: #16a085; /* Color verde azulado */
+    text-decoration: none; /* Sin subrayado */
+}
+form .signup-link a:hover {
+    text-decoration: underline; /* Subrayado al pasar mouse */
+}

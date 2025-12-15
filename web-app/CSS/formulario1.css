@@ -1,0 +1,167 @@
+/* Importación de fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Estilos generales para todos los elementos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Fuente principal */
+}
+
+/* Estilo para texto seleccionado */
+::selection{
+  background: rgba(82, 161, 62, 0.3); /* Color de fondo al seleccionar texto */
+}
+
+/* Estilos para el contenedor principal */
+.container{
+  max-width: 640px; /* Ancho máximo */
+  padding: 0 20px; /* Relleno interno */
+  margin: 90px auto; /* Margen superior y centrado horizontal */
+}
+
+/* Estilos para el wrapper (envoltorio principal) */
+.wrapper{
+  width: 100%;
+  background: #fff; /* Fondo blanco */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1); /* Sombra */
+}
+
+/* Estilos para el encabezado */
+.header{
+  width:100%;
+  height: 70px;
+  margin-top: 0px;
+  border-left: 10px;
+  background: #00000093; /* Fondo negro semitransparente */
+}
+
+/* Estilos para el título */
+.wrapper .title{
+  height: 90px;
+  background: #2b1249; /* Color de fondo morado oscuro */
+  border-radius: 5px 5px 0 0; /* Bordes redondeados solo arriba */
+  color: #fff; /* Texto blanco */
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrado vertical y horizontal */
+}
+
+/* Estilos para el formulario */
+.wrapper form{
+  padding: 30px 25px 25px 25px; /* Relleno interno */
+}
+
+/* Estilos para las filas del formulario */
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Estilos para los inputs */
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px; /* Espacio para el icono */
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Estilos para inputs con foco */
+form .row input:focus{
+  border-color: #D99842; /* Borde naranja */
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25); /* Sombra interna */
+}
+
+/* Estilos para placeholder */
+form .row input::placeholder{
+  color: #999; /* Color gris para placeholder */
+}
+
+/* Estilos para iconos */
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff; /* Icono blanco */
+  font-size: 18px;
+  background: #D99842; /* Fondo naranja */
+  border: 1px solid;
+  border-radius: 5px 0 0 5px; /* Bordes redondeados izquierda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para enlace de contraseña */
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #c48432; /* Color naranja */
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline; /* Subrayado al pasar mouse */
+}
+
+/* Estilos para botones */
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #2b1249; /* Fondo morado oscuro */
+  border: 1px solid #2b1249;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #49217a; /* Color hover más claro */
+}
+
+/* Estilos para enlace de registro */
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #16a085; /* Color verde azulado */
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline; /* Subrayado al pasar mouse */
+}
+
+/* Estilos para opciones */
+.option{
+    margin-left: 24%; /* Margen izquierdo */
+}
+
+/* Estilos para texto grande */
+.big{
+  font-size: 20px;
+  font-weight: 600;
+  align-content: center;
+  text-align: center;
+}
+
+/* Estilos para clase 'a' (probablemente botones) */
+.a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #2b1249; /* Fondo morado oscuro */
+  border: 1px solid #2b1249;
+  cursor: pointer;
+}

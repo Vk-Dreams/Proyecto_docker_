@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento HTML -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para responsive design -->
+    <link rel="stylesheet" href="/CSS/stylecla2.css"> <!-- Enlace a hoja de estilos CSS -->
+    <title>Usuarios</title> <!-- Título de la página -->
+</head>
+
+<!-- Encabezado con logo que redirige al menú principal -->
+<div class="header">
+  <a href="menu.html"><img height="60px" width="auto" src="/img/URBANOVA_text.png" alt="Logo Urbanova"></a>
+</div>
+
+<body>
+    <!-- Contenedor principal del formulario -->
+    <div class="container">
+        <div class="wrapper">
+          <div class="title"><span>Login Form</span></div> <!-- Título del formulario -->
+          
+          <!-- Formulario de login que envía datos por método GET a localiza.php -->
+          <form action="localiza.php" method="get">
+              <!-- Campo para nombre de usuario -->
+              <div class="row">
+                  <i class="fas fa-user"></i> <!-- Icono de usuario -->
+                  <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
+              </div>
+              
+              <!-- Campo para contraseña -->
+              <div class="row">
+                  <i class="fas fa-lock"></i> <!-- Icono de candado -->
+                  <input type="password" name="cla" id="cla" placeholder="Contraseña" required>
+              </div>
+              
+              <!-- Enlace para registro de nuevos usuarios -->
+              <div class="pass"><a href="opcion.html">¿No estas registrado? Crea tu Cuenta!</a></div>
+              
+              <!-- Botón de envío del formulario -->
+              <div class="row button">
+                  <input type="submit" value="Login">
+              </div>
+              
+              <!-- Botón de cancelar -->
+              <div class="row button">
+                  <input type="reset" value="Cancelar">
+              </div>
+          </form>
+     </div>
+      </div>
+</body>
+</html>

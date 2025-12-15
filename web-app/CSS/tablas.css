@@ -1,0 +1,90 @@
+/* Estilos generales para la tabla */
+table {
+    border: 1px solid #fdfcfc; /* Borde claro alrededor de toda la tabla */
+    border-collapse: collapse; /* Elimina los espacios entre bordes de celdas */
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+}
+
+/* Estilos para las celdas del cuerpo de la tabla */
+td {
+    border: 1px solid; /* Borde sencillo para cada celda */
+    text-align: center; /* Centra el texto dentro de la celda */
+    padding: 8px; /* Espaciado interno */
+    color: rgb(244, 243, 245); /* Color del texto */
+}
+
+/* Estilos para las celdas de encabezado */
+th {
+    border: 1px solid; /* Borde sencillo */
+    text-align: center; /* Texto centrado */
+    background: #097e60; /* Fondo verde oscuro */
+    color: rgb(253, 251, 251); /* Texto blanco */
+    padding: 10px; /* Espaciado interno */
+}
+
+/* Estilo adicional para tablas con clase table1 */
+.table1 {
+    border: 1px solid black; /* Borde negro delgado */
+    border-collapse: collapse; /* Colapsa los bordes */
+}
+
+/* Estilo adicional para tablas con clase table2 */
+.table2 {
+    border: 4px solid black; /* Borde negro grueso */
+    border-collapse: collapse;
+}
+
+/* Estilo para celdas destacadas */
+.celda {
+    border: 1px solid rgb(250, 247, 247); /* Borde claro */
+    padding: 5px;
+    background: #e4a16b; /* Fondo naranja */
+    font-size: 30px; /* Tamaño grande del texto */
+    text-align: center;
+    color: rgb(253, 251, 251); /* Texto blanco */
+}
+
+/* Estilo alternativo para celdas con alineación izquierda */
+.celda2 {
+    text-align: left;
+    font-size: 30px;
+}
+
+/* Estilo para etiquetas dentro de tablas o formularios */
+.etiqueta {
+    border: 1px solid rgb(252, 252, 252);
+    padding: 5px;
+    background: #e4a16b; /* Fondo naranja */
+    font-size: 30px;
+    text-align: left;
+    color: rgb(253, 251, 251); /* Texto blanco */
+}
+
+/* Estilo para campos de datos */
+.datos {
+    border: 1px solid rgb(252, 252, 252);
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+    color: rgb(45, 0, 128); /* Azul oscuro */
+}
+
+/* Estilo para botones dentro de tablas */
+.boton {
+    border: 1px solid;
+    text-align: center;
+    background: #097e60; /* Verde oscuro */
+    color: rgb(253, 251, 251); /* Texto blanco */
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Estilo para una fila de tabla que actúa como línea de botones */
+.linea-boton {
+    border: 1px solid rgb(252, 252, 252);
+    padding: 5px;
+    background: #e4a16b; /* Fondo naranja */
+    font-size: 30px;
+    text-align: center;
+    color: rgb(253, 251, 251); /* Texto blanco */
+}

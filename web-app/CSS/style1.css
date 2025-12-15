@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/* Importa la fuente "Poppins" desde Google Fonts con diferentes pesos */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Reinicia márgenes y paddings, usa el modelo de caja border-box y aplica la fuente global */
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #8169a7;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+/* Establece la barra lateral (sidebar) en posición fija, con ancho reducido inicialmente y fondo morado */
+
+.sidebar.open{
+  width: 250px;
+}
+/* Al abrir el sidebar, se amplía el ancho a 250px */
+
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+/* Contenedor del logo, centrado verticalmente */
+
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+/* Oculta el ícono del logo por defecto, con transición */
+
+.sidebar .logo-details .logito{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+/* Oculta otro posible ícono/logo complementario */
+
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+/* Estilo del nombre del logo: texto blanco, oculto inicialmente */
+
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logito,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+/* Al abrir el sidebar, los íconos y texto del logo se muestran */
+
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+/* Botón del menú (hamburguesa o flecha), centrado verticalmente en el logo */
+
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+/* Ajusta la alineación del botón al abrir la barra */
+
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+/* Estilo general para íconos: tamaño, altura y color */
+
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+/* Lista de navegación, con margen superior */
+
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+/* Elementos de lista sin viñetas, con separación vertical */
+
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.726);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+/* Estilo de los tooltips (etiquetas flotantes): ocultos por defecto */
+
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Muestra el tooltip al pasar el cursor sobre el ítem */
+
+.sidebar.open li .tooltip{
+  display: none;
+}
+/* Oculta los tooltips cuando el sidebar está abierto */
+
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #c4aceb;
+}
+/* Campo de búsqueda cerrado: pequeño y redondeado, con fondo morado claro */
+
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+/* Al abrir el sidebar, el input se expande y tiene padding interno */
+
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #886faf;
+  color: #FFF;
+}
+/* Ícono de búsqueda alineado verticalmente y con fondo */
+
+.sidebar.open .bx-search:hover{
+  background: #997dc5;
+  color: #FFF;
+}
+/* Hover del ícono de búsqueda en modo abierto */
+
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #997dc5;
+}
+/* Hover del ícono de búsqueda en modo cerrado */
+
+.sidebar button[type=submit]{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #886faf;
+  color: #FFF;
+}
+/* Estilo del botón de envío (tipo submit), alineado verticalmente */
+
+.sidebar.open button[type=submit]:hover{
+  background: #997dc5;
+  color: #FFF;
+}
+/* Hover del botón en modo abierto */
+
+.sidebar button[type=submit]:hover{
+  background: #FFF;
+  color: #997dc5;
+}
+/* Hover del botón en modo cerrado */
+
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #886faf;
+}
+/* Estilo de los enlaces dentro del menú: alineados, sin subrayado, con fondo morado */
+
+.sidebar li a:hover{
+  background: #997dc5;
+}
+/* Al pasar el mouse, se oscurece el fondo del enlace */
+
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+/* El texto del enlace está oculto por defecto */
+
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Al abrir el sidebar, se muestra el texto de los enlaces */
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #6e5c3f;
+}
+/* Cambia el color del ícono y texto al pasar el cursor */
+
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+  color: #fff;
+}
+/* Estilo adicional para los íconos del menú: tamaño, forma y color */
+
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+/* Estilo de imagen de perfil u otros íconos en el sidebar */
+
+.home-section{
+  position: relative;
+  background: linear-gradient(rgba(217, 152, 66, 0.76), rgba(48, 21, 80, 0.918)), url("../img/fondo7.png") no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+/* Sección principal (fuera del sidebar), con fondo degradado + imagen fija, ajusta ancho dependiendo del sidebar */
+
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+/* Al abrir el sidebar, la sección principal se corre hacia la derecha */
+
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px;
+}
+/* Estilo del texto principal dentro de home-section */
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+/* En pantallas pequeñas, se ocultan los tooltips */
+
+iframe {  
+  width: 100%;  
+  height: 100%;  
+  border: none;
+  overflow: hidden;
+  background-size: cover; 
+}
+/* Estilos generales para los iframes: sin borde ni desbordamientos */
+
+.contenedor-responsivo {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+/* Contenedor para iframes responsivos (relación 16:9) */
+
+.iframe-responsivo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: flex;
+  background-size: cover;
+}
+/* Iframe que se adapta al contenedor responsivo */

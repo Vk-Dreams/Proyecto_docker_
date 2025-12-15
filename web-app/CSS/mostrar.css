@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/* Importa la fuente 'Poppins' desde Google Fonts con varios pesos */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+/* Estilo base para todos los elementos: elimina márgenes y rellenos por defecto, 
+   aplica el modelo de caja border-box y establece la fuente Poppins */
+
+.header{
+    width: 100%;
+    height: 70px;
+    margin-top: 0px;
+    border-left: 0px;
+    background: #00000093;
+}
+/* Define un encabezado con fondo semi-transparente, altura fija de 70px y ancho completo */
+
+.container{
+    max-width: 640px;
+    padding: 0 20px;
+    margin: 50px auto;
+}
+/* Contenedor centrado con ancho máximo de 640px y márgenes laterales de 20px */
+
+.wrapper{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+/* Caja blanca con bordes redondeados y una ligera sombra para dar profundidad */
+
+.wrapper .title{
+    border-radius: 15px;
+    height: 50px;
+    background: #2b1249;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Encabezado del wrapper con fondo morado, texto blanco centrado vertical y horizontalmente */
+
+.foto{
+    text-align: center;
+    background: #f8f7f7;
+    padding: 8px;
+}
+/* Sección centrada con fondo claro y relleno de 8px, posiblemente para mostrar una imagen */
+
+.wrapper .row{
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+    align-items: center;
+    margin-left: 20px;
+    border: 1px solid #696669a9;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+/* Filas con altura fija, bordes redondeados, separación inferior y centradas horizontalmente */
+
+.wrapper .rowc{
+    height: 45px;
+    margin-bottom: 15px;
+    margin-left: 33%;
+    align-items: center;
+}
+/* Variante de la fila con margen izquierdo del 33%, usada para centrar elementos más pequeños */
+
+.wrapper .row i{
+    position: absolute;
+    width: 240px;
+    height: 100%;
+    color: #fff;
+    background: #D99842;
+    border: 1px solid ;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+/* Estilo para íconos o etiquetas dentro de la fila, con fondo naranja, texto blanco y alineación centrada */
+
+.wrapper .boton{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    background: #2b1249;
+    border: 1px solid #2b1249;
+    cursor: pointer;
+    border-radius: 10px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    width: 210px;
+    display: flex;
+}
+/* Botón con fondo morado, texto blanco, bordes redondeados y alineación centrada */
+
+.wrapper .boton:hover{
+    background: #49217a;
+}
+/* Cambia el color de fondo del botón al pasar el cursor sobre él (hover) */
+
+.big{
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 3%;
+    color: #2b1249;
+}
+/* Texto grande, en negrita, con un color morado y margen izquierdo del 3% */
+
+.wrapper .text1{
+    margin-left: 250px;
+}
+/* Aplica un margen izquierdo significativo al elemento con clase 'text1' */
+
+.wrapper .rowg{
+    margin-bottom: 15px;
+    position: relative;
+    align-items: center;
+    margin-left: 20px;
+    border: 1px solid #696669a9;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+/* Otra variante de las filas, similar a .row pero pensada para elementos más grandes */
+
+.rowg .grande{
+    max-width: 100%;
+    padding: 10px;
+    word-wrap: break-word;
+}
+/* Contenedor de texto grande con ajuste automático del contenido dentro del ancho disponible */

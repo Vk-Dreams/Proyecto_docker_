@@ -1,0 +1,321 @@
+/* Fuente principal desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Reset de márgenes, paddings y modelo de caja, se establece fuente general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Contenedor principal centrado */
+.container {
+  max-width: 1100px;
+  padding: 0 20px;
+  margin: 50px auto;
+}
+
+/* Caja blanca con sombra */
+.wrapper {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+
+/* Espaciador vertical */
+.espacio {
+  height: 30px;
+}
+
+/* Título con estilo */
+.p .tit {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Título dentro del contenedor blanco */
+.wrapper .title1 {
+  height: 90px;
+  color: #2b1249;
+  font-size: 26px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Título principal con fondo morado */
+.wrapper .title {
+  height: 90px;
+  background: #2b1249;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Formulario con padding */
+.wrapper form {
+  padding: 30px 25px 25px 25px;
+}
+
+/* Fila dentro del formulario */
+.wrapper .row {
+  margin-right: 5%;
+  margin-left: 5%;
+  text-justify: distribute-all-lines;
+}
+
+/* Campos de entrada */
+.wrapper form .row input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al enfocar el input */
+form .row input:focus {
+  border-color: #D99842;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+
+/* Placeholder en los inputs */
+form .row input::placeholder {
+  color: #999;
+}
+
+/* Icono dentro del input */
+.wrapper form .row i {
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #D99842;
+  border: 1px solid;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Margen para campos de contraseña */
+.wrapper form .pass {
+  margin: -8px 0 20px 0;
+}
+
+/* ===== BARRA LATERAL (SIDEBAR) ===== */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #8169a7;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+
+/* Sidebar expandida */
+.sidebar.open {
+  width: 250px;
+}
+
+/* Detalles del logo dentro de la barra lateral */
+.sidebar .logo-details {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Iconos del logo ocultos por defecto */
+.sidebar .logo-details .icon,
+.sidebar .logo-details .logito,
+.sidebar .logo-details .logo_name {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* Mostrar iconos si está abierta */
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logito,
+.sidebar.open .logo-details .logo_name {
+  opacity: 1;
+}
+
+/* Botón de abrir/cerrar */
+.sidebar .logo-details #btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+/* Centrado a la derecha en sidebar abierta */
+.sidebar.open .logo-details #btn {
+  text-align: right;
+}
+
+/* Estilo general de íconos */
+.sidebar i {
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+
+/* Lista de navegación */
+.sidebar .nav-list {
+  margin-top: 20px;
+  height: 100%;
+}
+
+/* Cada ítem de la lista */
+.sidebar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+
+/* Tooltip oculto por defecto */
+.sidebar li .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.726);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+
+/* Mostrar tooltip al pasar el mouse */
+.sidebar li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Ocultar tooltip si está abierta */
+.sidebar.open li .tooltip {
+  display: none;
+}
+
+/* Campo de búsqueda reducido */
+.sidebar input {
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #c4aceb;
+}
+
+/* Expandir búsqueda si está abierta */
+.sidebar.open input {
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+
+/* Icono de búsqueda */
+.sidebar .bx-search {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #886faf;
+  color: #FFF;
+}
+
+/* Hover en búsqueda */
+.sidebar.open .bx-search:hover {
+  background: #997dc5;
+  color: #FFF;
+}
+.sidebar .bx-search:hover {
+  background: #FFF;
+  color: #997dc5;
+}
+
+/* Botón submit dentro de la barra */
+.sidebar button[type=submit] {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #886faf;
+  color: #FFF;
+}
+.sidebar.open button[type=submit]:hover {
+  background: #997dc5;
+}
+.sidebar button[type=submit]:hover {
+  background: #FFF;
+  color: #997dc5;
+}
+
+/* Estilo de los enlaces */
+.sidebar li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #886faf;
+}
+.sidebar li a:hover {
+  background: #997dc5;
+}
+
+/* Texto del link oculto por defecto */
+.sidebar li a .links_name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+/* Mostrar nombres en barra expandida */
+.sidebar.open li a .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Color al pasar el mouse por*

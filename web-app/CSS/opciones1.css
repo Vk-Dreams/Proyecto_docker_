@@ -1,0 +1,119 @@
+/* Importa la fuente Poppins de Google Fonts con diferentes grosores */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Estilos base para todos los elementos */
+* {
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+    box-sizing: border-box; /* Modelo de caja más intuitivo */
+    font-family: "Poppins", sans-serif; /* Establece Poppins como fuente principal */
+}
+
+/* Estilo para el texto seleccionado */
+::selection {
+    background: rgba(82, 161, 62, 0.3); /* Fondo verde semi-transparente al seleccionar */
+}
+
+/* Estilos para el encabezado */
+.header {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 70px; /* Altura fija */
+    margin-top: 0px; /* Sin margen superior */
+    background: #00000093; /* Fondo negro semi-transparente */
+}
+
+/* Estilos para el contenedor principal */
+.wrapper {
+    margin-top: 50px; /* Margen superior */
+    margin-left: 28%; /* Margen izquierdo */
+    width: 580px; /* Ancho fijo */
+    height: 600px; /* Altura fija */
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.555); /* Sombra */
+    align-items: center; /* Centra elementos hijos */
+}
+
+/* Estilo para crear espacio vacío */
+.espacio {
+    height: 300px; /* Altura fija para espacio vacío */
+}
+
+/* Estilos para el título dentro del wrapper */
+.wrapper .title {
+    margin-top: 80px; /* Margen superior */
+    align-content: center; /* Centra contenido */
+    height: 90px; /* Altura fija */
+    background: #2b1249; /* Fondo morado oscuro */
+    border-radius: 8px 8px 0px 0px; /* Bordes redondeados solo arriba */
+    color: #ffffff; /* Texto blanco */
+    font-size: 30px; /* Tamaño de fuente grande */
+    font-weight: 700; /* Grosor de fuente negrita */
+    display: flex; /* Usa flexbox para alineación */
+    align-items: inherit; /* Hereda alineación */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* Estilos para el primer botón */
+.boton .uno {
+    width: 200px; /* Ancho fijo */
+    height: 60px; /* Altura fija */
+    color: #fff; /* Texto blanco */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bolder; /* Texto en negrita */
+    border-radius: 20px; /* Bordes muy redondeados */
+    background: #D99842; /* Fondo naranja */
+    text-align: center; /* Centra texto horizontalmente */
+    align-content: center; /* Centra contenido */
+    cursor: pointer; /* Cursor tipo puntero */
+    margin-top: 110px; /* Margen superior grande */
+    margin-left: 60px; /* Margen izquierdo */
+}
+
+/* Estilos para el segundo botón */
+.boton .dos {
+    width: 200px; /* Ancho fijo */
+    height: 60px; /* Altura fija */
+    color: #fff; /* Texto blanco */
+    font-size: 19.5px; /* Tamaño de fuente ligeramente mayor */
+    font-weight: bolder; /* Texto en negrita */
+    border-radius: 20px; /* Bordes muy redondeados */
+    background: #D99842; /* Fondo naranja */
+    align-content: center; /* Centra contenido */
+    text-align: center; /* Centra texto horizontalmente */
+    cursor: pointer; /* Cursor tipo puntero */
+    margin-top: 180px; /* Margen superior más grande */
+    margin-left: 60px; /* Margen izquierdo */
+}
+
+/* Efecto hover para el primer botón */
+.boton .uno:hover {
+    background: #f1af57; /* Color naranja más claro al pasar el mouse */
+}
+
+/* Efecto hover para el segundo botón */
+.boton .dos:hover {
+    background: #f1af57; /* Color naranja más claro al pasar el mouse */
+}
+
+/* Estilos para el primer texto descriptivo */
+.wrapper .text1 {
+    text-align: center; /* Centra el texto */
+    font-size: 18px; /* Tamaño de fuente */
+    width: 200px; /* Ancho fijo */
+    margin-left: 315px; /* Margen izquierdo grande */
+    margin-top: -310px; /* Margen superior negativo (superpone elementos) */
+    font-weight: bold; /* Texto en negrita */
+    color: #2b1249; 
+}
+
+/* Estilos para el segundo texto descriptivo */
+.wrapper .text2 {
+    text-align: center; /* Centra el texto */
+    font-size: 17px; /* Tamaño de fuente ligeramente menor */
+    width: 200px; /* Ancho fijo */
+    margin-left: 315px; /* Margen izquierdo grande */
+    margin-top: 80px; /* Margen superior */
+    font-weight: bold; /* Texto en negrita */
+    color: #2b1249; 
+}
