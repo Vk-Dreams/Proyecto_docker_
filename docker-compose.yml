@@ -2,8 +2,7 @@ version: '3.8'
 
 services:
   app:
-    build:
-      context: ./web-app
+    image: waratipola/nombre_app:latest
     ports:
       - "8080:80"
     volumes:
@@ -25,4 +24,5 @@ services:
       - db-data:/var/lib/mysql
 
 volumes:
+
   db-data:
